@@ -1,0 +1,18 @@
+nav{
+    font-family: 'Roboto' sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 0.25em;
+    border-bottom: 1px solid grey;
+    padding: 0.5em;
+    padding-left: 0px;
+    width: 30%;
+    margin-left: 0.5em;
+    padding-right: 0px;
+}
+
+img{
+    margin: 1.5%;
+    width: 30%;
+    height: 23rem;
+}
