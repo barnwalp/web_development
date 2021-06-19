@@ -10,6 +10,11 @@ a{
     color: white;
     font-weight: 500;
     font-size: 1.05rem;
+    height: 1.5rem;
+}
+
+a:hover{
+    color: grey;
 }
 
 nav > a{
