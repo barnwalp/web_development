@@ -1,0 +1,55 @@
+body{
+	margin: 0px;
+}
+
+a{
+	font-family: georgia Arial, Helvetica, sans-serif;
+	margin: 5px;
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+nav > a{
+    margin: 10px;
+}
+
+nav > a:first-child{
+    font-size: 1.25rem;
+}
+
+nav{
+	height: 300px;
+	border: 1px solid black;
+	display: flex;
+	justify-content: space-around;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 21%, rgba(29,117,253,1) 72%);
+}
+
+nav div{
+    margin: 10px;
+    padding: 5 px;
+}
+
+/* Responsive webpage */
+@media (max-width: 600px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 320px){
+    nav{
+        background-color: grey;
+    }
+}
