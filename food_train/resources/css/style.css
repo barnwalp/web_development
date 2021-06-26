@@ -1,3 +1,6 @@
+/* --------------------------------------- */
+/* --------------Resuable----------------- */
+/* --------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -9,19 +12,16 @@
 html {
     background-color: #fff;
     color: #555;
-    font-family: 'Lato' 'Arial', sans-serif;
+    font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     /* This will ensure perfect font rendering */
     text-rendering: optimizeLegibility;
 }
 
-.row{
-    /* it will keep the navigation centered on larger screen */
-    max-width: 1140px;
-    margin: 0 auto;
-    /* border: 1px solid black; */
-}
+/* --------------------------------------- */
+/* ----------------Header----------------- */
+/* --------------------------------------- */
 
 header{
     /* since text does not look good on an image, it is a good idea to darken the
@@ -48,6 +48,10 @@ header{
     transform: translate(-50%, -50%);
 }
 
+/* --------------------------------------- */
+/* ---------------Heading----------------- */
+/* --------------------------------------- */
+
 h1{
     margin-top: 0;
     margin-bottom: 20px;
@@ -58,6 +62,10 @@ h1{
     text-transform: uppercase;
     word-spacing: 4px;
 }
+
+/* --------------------------------------- */
+/* ---------------Buttons----------------- */
+/* --------------------------------------- */
 
 .btn:link,
 .btn:visited{
@@ -91,6 +99,17 @@ h1{
     background-color: #cf6d17;
     border: 1px solid #cf6d17;
     color: #fff;
+}
+
+/* --------------------------------------- */
+/* ---------Navigation Bar---------------- */
+/* --------------------------------------- */
+
+.row{
+    /* it will keep the navigation centered on larger screen */
+    max-width: 1140px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
 }
 
 .logo{
