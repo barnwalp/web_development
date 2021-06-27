@@ -13,6 +13,10 @@ section{
     padding: 80px 0;
 }
 
+.box{
+    padding: 1%;
+}
+
 html {
     background-color: #fff;
     color: #555;
@@ -57,10 +61,10 @@ header{
 /* --------------------------------------- */
 
 h1,
-h2{
+h2,
+h3{
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 h1{
@@ -70,6 +74,7 @@ h1{
     /* size will be 200% of the html font size */
     font-size: 240%;
     word-spacing: 4px;
+    letter-spacing: 1px;
 }
 
 h2{
@@ -77,6 +82,12 @@ h2{
     word-spacing: 2px;
     text-align: center;
     margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
 }
 
 /* creating a line after h2 tag */
@@ -89,6 +100,30 @@ h2:after {
     width: 100px;
     margin: 0 auto;
     margin-top: 30px;
+}
+
+/* ---------------Paragraph----------------- */
+
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    /* since width is 70%, left and right margin should be 15%
+    to keep the paragraph in the center */
+    margin-left: 15%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* ---------------Icons----------------- */
+.icon-big{
+    /* icons are really a font, so we can change it's size using */
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
 }
 
 /* --------------------------------------- */
