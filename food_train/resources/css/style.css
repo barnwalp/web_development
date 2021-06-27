@@ -110,6 +110,7 @@ h2:after {
     /* since width is 70%, left and right margin should be 15%
     to keep the paragraph in the center */
     margin-left: 15%;
+    margin-bottom: 25px;
 }
 
 .box p{
@@ -213,6 +214,11 @@ h2:after {
 /* --------------------------------------- */
 /* --------------Meals photos------------- */
 /* --------------------------------------- */
+
+.section-meals{
+    padding: 0;
+}
+
 .meals-showcase{
     list-style: none;
     width: 100%;
@@ -224,13 +230,26 @@ h2:after {
     width: 25%;
 }
 
-/* .meal-photo{
+.meal-photo{
     width: 100%;
     margin: 0;
+    overflow: hidden;
+    background-color: #000;
 }
-*/
+
 .meal-photo img{
     margin: 0;
     width: 100%;
     height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+    /* To make the image darker, opacity can be used with background-color property
+    by making background black and changing the opacity will make img darker */
+    opacity: 0.7;
+}
+
+.meal-photo img:hover{
+    /* scaling to 1 shows a white padding line */
+    transform: scale(1.03);
+    opacity: 1;
 }
