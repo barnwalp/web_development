@@ -1,20 +1,13 @@
 /* --------------------------------------- */
-/* --------------Resuable----------------- */
+/* BASIC SETUP */
 /* --------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
     /* it tells the browser to acount the border and padding in the values you
     specify for an element's width and height. */
     box-sizing: border-box;
-}
-
-section{
-    padding: 80px 0;
-}
-
-.box{
-    padding: 1%;
 }
 
 html {
@@ -28,7 +21,26 @@ html {
 }
 
 /* --------------------------------------- */
-/* ----------------Header----------------- */
+/* REUSABLE CODES*/
+/* --------------------------------------- */
+
+.row{
+    /* it will keep the navigation centered on larger screen */
+    max-width: 1140px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+section{
+    padding: 80px 0;
+}
+
+.box{
+    padding: 1%;
+}
+
+/* --------------------------------------- */
+/* HEADER */
 /* --------------------------------------- */
 
 header{
@@ -57,7 +69,7 @@ header{
 }
 
 /* --------------------------------------- */
-/* ---------------Heading----------------- */
+/* HEADING */
 /* --------------------------------------- */
 
 h1,
@@ -128,7 +140,7 @@ h2:after {
 }
 
 /* --------------------------------------- */
-/* ---------------Buttons----------------- */
+/* BUTTONS */
 /* --------------------------------------- */
 
 .btn:link,
@@ -166,15 +178,8 @@ h2:after {
 }
 
 /* --------------------------------------- */
-/* ---------Navigation Bar---------------- */
+/* NAVIGATION BAR */
 /* --------------------------------------- */
-
-.row{
-    /* it will keep the navigation centered on larger screen */
-    max-width: 1140px;
-    margin: 0 auto;
-    /* border: 1px solid black; */
-}
 
 .logo{
     height: 100px;
@@ -212,7 +217,7 @@ h2:after {
 }
 
 /* --------------------------------------- */
-/* --------------Meals photos------------- */
+/* MEALS PHOTO */
 /* --------------------------------------- */
 
 .section-meals{
