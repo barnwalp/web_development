@@ -20,6 +20,18 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+/* This will clear the floats in an element after adding
+clearfix class in it's parent. in this case, clearfix class 
+will be added in the ul element to clear float in li element*/
+.clearfix {zoom: 1}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /* --------------------------------------- */
 /* REUSABLE CODES*/
 /* --------------------------------------- */
