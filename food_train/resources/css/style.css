@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+section{
+    padding: 80px 0;
+}
+
 html {
     background-color: #fff;
     color: #555;
@@ -52,15 +56,39 @@ header{
 /* ---------------Heading----------------- */
 /* --------------------------------------- */
 
+h1,
+h2{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 h1{
     margin-top: 0;
     margin-bottom: 20px;
     color: white;
     /* size will be 200% of the html font size */
     font-size: 240%;
-    font-weight: 300;
-    text-transform: uppercase;
     word-spacing: 4px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* creating a line after h2 tag */
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    /* line will be visible only after adding content */
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 /* --------------------------------------- */
