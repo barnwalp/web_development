@@ -324,3 +324,35 @@ h2:after {
     width: auto;
     margin-right: 10px;
 }
+
+/* ----------------------------------------- */
+/* OUR CITIES */
+/* ----------------------------------------- */
+
+.city-box{
+    width: 25%;
+    margin: 0;
+}
+
+.city-box img{
+    width: 100%;
+    height: auto;
+}
+
+.city-box h3{
+    margin-top: 20px;
+}
+
+.city-feature{
+    font-size: 105%;
+    margin-bottom: 10px;
+}
+
+.icon-small{
+    color: #e67e22;
+    margin-right: 10px;
+}
+
+.city-box .city-feature:last-child{
+    color: #e67e22;
+}
