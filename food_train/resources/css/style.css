@@ -353,6 +353,7 @@ h2:after {
     margin-right: 10px;
 }
 
-.city-box .city-feature:last-child{
+.city-feature span{
     color: #e67e22;
+    border-bottom: 1px solid #e67e22;
 }
