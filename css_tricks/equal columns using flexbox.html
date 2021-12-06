@@ -7,17 +7,45 @@
   <title>Equal columns with Flexbox</title>
   <style>
     .hero {
+      padding: 110px 80px;
+      background-color: #003f9d;
       display: flex;
+    }
+    .title-text {
+      padding-right: 110px;
+    }
+    .title-text h3, .title-text p {
+      color: white;
+    }
+    .title-image img{
+      width: 400px;
     }
     .features {
       /* width: 300px; */
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      padding: 100px;
     }
     .feature img {
-      width: 100px;
-      height: 70px;
+      width: 140px;
+      height: 90px;
       border-radius: 5px;
+    }
+    .feature p {
+      width: 210px;
+    }
+    .btn {
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #003f9d;
+      background-color: white;
+      border: none;
+      border-radius: 3px;
+    }
+    .btn:hover {
+      background-color: #003f9d;
+      color: white;
+      border: 1px solid white;
     }
   </style>
 </head>
@@ -27,8 +55,8 @@
         <div class="title-text">
           <h3>Really catchy headline here</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates iste, optio modi, neque animi cumque pariatur magni provident autem at tenetur quas. Accusamus veritatis consequatur excepturi, tempora sunt assumenda voluptatum?</p>
-          <a href="#">Get Started</a>
-          <a href="#">Learn More</a>
+          <a class="btn" href="#">Get Started</a>
+          <a class="btn" href="#">Learn More</a>
         </div>
         <div class="title-image">
           <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGxhcHRvcHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="lapotp">
