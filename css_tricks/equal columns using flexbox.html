@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Equal columns with Flexbox</title>
   <style>
+    /* HERO SECTION */
+    /* ------------ */
     .hero {
       padding: 110px 80px;
       background-color: #003f9d;
@@ -27,20 +29,6 @@
     .title-image img{
       width: 400px;
     }
-    .features {
-      /* width: 300px; */
-      display: flex;
-      justify-content: space-around;
-      padding: 100px;
-    }
-    .feature img {
-      width: 140px;
-      height: 90px;
-      border-radius: 5px;
-    }
-    .feature p {
-      width: 210px;
-    }
     .btn {
       padding: 5px 10px;
       text-decoration: none;
@@ -54,6 +42,27 @@
       color: white;
       border: 1px solid white;
     }
+    /* FEATURE SECTION */
+    /* --------------- */
+    .features {
+      /* width: 300px; */
+      display: flex;
+      justify-content: space-around;
+      padding: 100px;
+    }
+    .feature > * {
+      flex-grow: 1;
+      /* flex-basis: 100%; */
+      max-width: 200px;
+    }
+    .feature img {
+      width: 140px;
+      height: 90px;
+      border-radius: 5px;
+    }
+    /* .feature p {
+      width: 210px;
+    } */
   </style>
 </head>
 <body>
