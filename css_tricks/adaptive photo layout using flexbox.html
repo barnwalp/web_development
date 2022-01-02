@@ -5,6 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adaptive Photo Layout using flexbox</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    li {
+      padding: 0;
+      margin: 0;
+      flex-grow: 1;
+      flex-basis: 0%;
+    }
+    img {
+      height: 200px;
+      /* max-width: 100%; */
+    }
+  </style>
 </head>
 <body>
   <ul>
@@ -22,9 +43,6 @@
     </li>
     <li>
       <img src="https://images.unsplash.com/photo-1640891523998-2053b29acbb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" alt="">
-    </li>
-    <li>
-      <img src="https://images.unsplash.com/photo-1640885939079-9ce1a8c2b135?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" alt="">
     </li>
     <li>
       <img src="https://images.unsplash.com/photo-1640885939079-9ce1a8c2b135?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" alt="">
