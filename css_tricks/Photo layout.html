@@ -16,15 +16,17 @@
     .img-container {
       /* to ensure that image does not overflow while zooming in */
       overflow: hidden;
+      flex-grow: 1;
     }
     img {
       height: 200px;
-      flex-grow: 1;
-      transform: scale(1.19);
+      /* value is tweaked to ensure that there is no whitespace around the image */
+      transform: scale(1.50);
       transition: transform 0.5s, opacity 0.5s;
     }
     img:hover {
-      transform: scale(1.05);
+      /* value is tweaked to ensure that there is no whitespace around the image while hovering*/
+      transform: scale(1.30);
       opacity: 0.90;
     }
   </style>
