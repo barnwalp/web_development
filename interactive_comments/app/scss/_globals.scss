@@ -19,6 +19,7 @@ body {
   font-size: $font-med;
   font-weight: 400;
   font-family: "Rubik", sans-serif;
+  background-color: $VeryLightGray;
 }
 
 // remove inbuilt browser design
@@ -36,10 +37,12 @@ a:hover {
 .container {
   width: 60%;
   padding: size(32);
-  margin: 0 auto;
+  margin: size(48) auto;
+  border-radius: size(10);
   .box-avatar,
   .box-time,
   .box-crud {
     display: inline-block;
   }
+  background-color: $White;
 }
