@@ -36,13 +36,12 @@ a:hover {
 
 .container {
   width: 60%;
-  padding: size(32);
-  margin: size(48) auto;
+  // padding: size(16);
+  margin: size(32) auto;
   border-radius: size(10);
   .box-avatar,
   .box-time,
   .box-crud {
     display: inline-block;
   }
-  background-color: $White;
 }

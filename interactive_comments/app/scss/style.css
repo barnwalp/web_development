@@ -35,15 +35,20 @@ a:hover {
 
 .container {
   width: 60%;
-  padding: 2rem;
-  margin: 3rem auto;
+  margin: 2rem auto;
   border-radius: 0.625rem;
-  background-color: white;
 }
 
 .container .box-avatar,
 .container .box-time,
 .container .box-crud {
   display: inline-block;
+}
+
+.box {
+  background-color: white;
+  margin: 1.5rem 0;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
