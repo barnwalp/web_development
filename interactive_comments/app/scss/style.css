@@ -54,7 +54,6 @@ a:hover {
   display: grid;
   -ms-grid-columns: 1fr 3fr 3fr 8fr;
       grid-template-columns: 1fr 3fr 3fr 8fr;
-  gap: 0.625rem;
       grid-template-areas: "upvote pic time crud" "upvote content content content";
 }
 
@@ -63,12 +62,18 @@ a:hover {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: upvote;
+  margin: auto 0;
 }
 
 .box-avatar {
+  margin: auto 0;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: pic;
+}
+
+.box-avatar > img {
+  width: 20%;
 }
 
 .box-time {
@@ -81,6 +86,11 @@ a:hover {
   -ms-grid-row: 1;
   -ms-grid-column: 4;
   grid-area: crud;
+  text-align: right;
+}
+
+.box-crud > a {
+  margin: 0 1rem;
 }
 
 .box-comment {
@@ -88,5 +98,9 @@ a:hover {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: content;
+}
+
+.box-comment > p {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

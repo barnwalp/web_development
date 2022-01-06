@@ -5,23 +5,35 @@
   border-radius: size(8);
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 8fr;
-  gap: size(10);
+  // gap: size(10);
   grid-template-areas:
     "upvote pic time crud"
     "upvote content content content";
   &-upvotes {
     grid-area: upvote;
+    margin: auto 0;
   }
   &-avatar {
+    margin: auto 0;
     grid-area: pic;
+    & > img {
+      width: 20%;
+    }
   }
   &-time {
     grid-area: time;
   }
   &-crud {
     grid-area: crud;
+    text-align: right;
+    & > a {
+      margin: 0 size(16);
+    }
   }
   &-comment {
     grid-area: content;
+    & > p {
+      margin: 0;
+    }
   }
 }
