@@ -3,4 +3,25 @@
   margin: size(24) 0;
   padding: size(12);
   border-radius: size(8);
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 8fr;
+  gap: size(10);
+  grid-template-areas:
+    "upvote pic time crud"
+    "upvote content content content";
+  &-upvotes {
+    grid-area: upvote;
+  }
+  &-avatar {
+    grid-area: pic;
+  }
+  &-time {
+    grid-area: time;
+  }
+  &-crud {
+    grid-area: crud;
+  }
+  &-comment {
+    grid-area: content;
+  }
 }

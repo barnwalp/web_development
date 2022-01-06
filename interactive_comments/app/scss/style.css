@@ -50,5 +50,43 @@ a:hover {
   margin: 1.5rem 0;
   padding: 0.75rem;
   border-radius: 0.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr 3fr 8fr;
+      grid-template-columns: 1fr 3fr 3fr 8fr;
+  gap: 0.625rem;
+      grid-template-areas: "upvote pic time crud" "upvote content content content";
+}
+
+.box-upvotes {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: upvote;
+}
+
+.box-avatar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: pic;
+}
+
+.box-time {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: time;
+}
+
+.box-crud {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: crud;
+}
+
+.box-comment {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: content;
 }
 /*# sourceMappingURL=style.css.map */
