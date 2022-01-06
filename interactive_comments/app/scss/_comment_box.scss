@@ -4,28 +4,39 @@
   padding: size(12);
   border-radius: size(8);
   display: grid;
-  grid-template-columns: 1fr 3fr 3fr 8fr;
+  grid-template-columns: 1fr 1fr 3fr 3fr 8fr;
   // gap: size(10);
   grid-template-areas:
-    "upvote pic time crud"
-    "upvote content content content";
+    "upvote pic name time crud"
+    "upvote content content content content";
   &-upvotes {
     grid-area: upvote;
-    margin: auto 0;
+    margin: auto 5px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: $VeryLightGray;
+    padding: size(32) size(5);
+    border-radius: 8px;
   }
   &-avatar {
     margin: auto 0;
     grid-area: pic;
     & > img {
-      width: 20%;
+      width: 70%;
     }
+  }
+  &-name {
+    grid-area: name;
+    margin: auto 0;
   }
   &-time {
     grid-area: time;
+    margin: auto 0;
   }
   &-crud {
     grid-area: crud;
     text-align: right;
+    margin: auto 0;
     & > a {
       margin: 0 size(16);
     }

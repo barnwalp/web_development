@@ -52,9 +52,9 @@ a:hover {
   border-radius: 0.5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr 3fr 8fr;
-      grid-template-columns: 1fr 3fr 3fr 8fr;
-      grid-template-areas: "upvote pic time crud" "upvote content content content";
+  -ms-grid-columns: 1fr 1fr 3fr 3fr 8fr;
+      grid-template-columns: 1fr 1fr 3fr 3fr 8fr;
+      grid-template-areas: "upvote pic name time crud" "upvote content content content content";
 }
 
 .box-upvotes {
@@ -62,7 +62,12 @@ a:hover {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: upvote;
-  margin: auto 0;
+  margin: auto 5px;
+  margin-right: 10px;
+  text-align: center;
+  background-color: #f5f6fa;
+  padding: 2rem 0.3125rem;
+  border-radius: 8px;
 }
 
 .box-avatar {
@@ -73,20 +78,29 @@ a:hover {
 }
 
 .box-avatar > img {
-  width: 20%;
+  width: 70%;
+}
+
+.box-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: name;
+  margin: auto 0;
 }
 
 .box-time {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-column: 4;
   grid-area: time;
+  margin: auto 0;
 }
 
 .box-crud {
   -ms-grid-row: 1;
-  -ms-grid-column: 4;
+  -ms-grid-column: 5;
   grid-area: crud;
   text-align: right;
+  margin: auto 0;
 }
 
 .box-crud > a {
@@ -96,7 +110,7 @@ a:hover {
 .box-comment {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 4;
   grid-area: content;
 }
 
