@@ -17,7 +17,11 @@
     background-color: $VeryLightGray;
     padding: size(12) size(5);
     border-radius: 8px;
-    color: $DarkBlue;
+    color: $GrayishBlue;
+    & span {
+      font-weight: 500;
+      color: $DarkBlue;
+    }
   }
   &-avatar {
     margin: auto 0;
@@ -29,23 +33,35 @@
   &-name {
     grid-area: name;
     margin: auto 0;
+    color: $DarkBlue;
+    font-weight: 700;
   }
   &-time {
     grid-area: time;
     margin: auto 0;
+    color: $GrayishBlue;
   }
   &-crud {
+    color: $ModerateBlue;
+    font-weight: 700;
     grid-area: crud;
     text-align: right;
     margin: auto 0;
     & > a {
       margin: 0 size(16);
+      &.remove {
+        color: $SoftRed;
+      }
     }
   }
   &-comment {
     grid-area: content;
     & > p {
       margin: 0;
+      & > span {
+        color: $ModerateBlue;
+        font-weight: 500;
+      }
     }
   }
 }

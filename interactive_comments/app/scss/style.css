@@ -68,6 +68,11 @@ a:hover {
   background-color: #f5f6fa;
   padding: 0.75rem 0.3125rem;
   border-radius: 8px;
+  color: #67727e;
+}
+
+.box-upvotes span {
+  font-weight: 500;
   color: #324152;
 }
 
@@ -87,6 +92,8 @@ a:hover {
   -ms-grid-column: 3;
   grid-area: name;
   margin: auto 0;
+  color: #324152;
+  font-weight: 700;
 }
 
 .box-time {
@@ -94,9 +101,12 @@ a:hover {
   -ms-grid-column: 4;
   grid-area: time;
   margin: auto 0;
+  color: #67727e;
 }
 
 .box-crud {
+  color: #5457b6;
+  font-weight: 700;
   -ms-grid-row: 1;
   -ms-grid-column: 5;
   grid-area: crud;
@@ -108,6 +118,10 @@ a:hover {
   margin: 0 1rem;
 }
 
+.box-crud > a.remove {
+  color: #ed6468;
+}
+
 .box-comment {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
@@ -117,5 +131,10 @@ a:hover {
 
 .box-comment > p {
   margin: 0;
+}
+
+.box-comment > p > span {
+  color: #5457b6;
+  font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */
