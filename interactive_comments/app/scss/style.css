@@ -66,8 +66,9 @@ a:hover {
   margin-right: 10px;
   text-align: center;
   background-color: #f5f6fa;
-  padding: 2rem 0.3125rem;
+  padding: 0.75rem 0.3125rem;
   border-radius: 8px;
+  color: #324152;
 }
 
 .box-avatar {
