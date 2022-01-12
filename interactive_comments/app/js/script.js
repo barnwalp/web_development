@@ -1,41 +1,43 @@
 // To ensure that logic runs only after document is loaded
 window.onload = function(){
-    const rating = document.querySelector('.test .vote');
-    const upvote = document.querySelector('.test .plus');
-    const downvote = document.querySelector('.test .minus');
+    const ratings = document.querySelectorAll('.vote');
+    const upvote = document.querySelectorAll('.plus');
+    const downvote = document.querySelectorAll('.minus');
 
-    upvote.addEventListener("click", function(){
-      console.log('clicked upvote sign');
-      if (upvote.classList.contains('clicked')) {
-        rating.innerHTML = Number(rating.innerHTML)-1;
-        upvote.classList.remove('clicked');
-      }
-      else if (downvote.classList.contains('clicked')) {
-        rating.innerHTML = Number(rating.innerHTML)+2;
-        downvote.classList.remove('clicked');
-        upvote.classList.add('clicked');
-      }
-      else {
-        rating.innerHTML = Number(rating.innerHTML)+1;
-        upvote.classList.add("clicked");
-      }
-    });
-    downvote.addEventListener('click', function() {
-      console.log('clicked downvote sign');
-      if (downvote.classList.contains('clicked')) {
-        rating.innerHTML = Number(rating.innerHTML)+1;
-        downvote.classList.remove('clicked');
-      }
-      else if (upvote.classList.contains('clicked')) {
-        rating.innerHTML = Number(rating.innerHTML)-2;
-        upvote.classList.remove('clicked');
-        downvote.classList.add('clicked');
-      }
-      else {
-        rating.innerHTML = Number(rating.innerHTML)-1;
-        downvote.classList.add("clicked");
-      }
-    })
+    for (const [index, rating] of ratings.entries()) {
+      upvote[index].addEventListener("click", function(){
+        console.log('clicked upvote sign');
+        if (upvote[index].classList.contains('clicked')) {
+          rating.innerHTML = Number(rating.innerHTML)-1;
+          upvote[index].classList.remove('clicked');
+        }
+        else if (downvote[index].classList.contains('clicked')) {
+          rating.innerHTML = Number(rating.innerHTML)+2;
+          downvote[index].classList.remove('clicked');
+          upvote[index].classList.add('clicked');
+        }
+        else {
+          rating.innerHTML = Number(rating.innerHTML)+1;
+          upvote[index].classList.add("clicked");
+        }
+      });
+      downvote[index].addEventListener('click', function() {
+        console.log('clicked downvote sign');
+        if (downvote[index].classList.contains('clicked')) {
+          rating.innerHTML = Number(rating.innerHTML)+1;
+          downvote[index].classList.remove('clicked');
+        }
+        else if (upvote[index].classList.contains('clicked')) {
+          rating.innerHTML = Number(rating.innerHTML)-2;
+          upvote[index].classList.remove('clicked');
+          downvote[index].classList.add('clicked');
+        }
+        else {
+          rating.innerHTML = Number(rating.innerHTML)-1;
+          downvote[index].classList.add("clicked");
+        }
+      });
+    }
         /*
         // remove overlay
         if (header.classList.contains('open')){
