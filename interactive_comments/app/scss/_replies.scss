@@ -1,0 +1,16 @@
+.container {
+  & .reply {
+    display: flex;
+    justify-content: space-around;
+    background-color: $White;
+    margin-top: -(size(12));
+    padding: size(12);
+    border-radius: size(8);
+    &-avatar img {
+      width: 60%;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}

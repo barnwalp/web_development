@@ -18,6 +18,10 @@
     padding: size(12) size(5);
     border-radius: 8px;
     color: $GrayishBlue;
+    & .clicked {
+      color: $SoftRed;
+      font-weight: 700;
+    }
     & span {
       font-weight: 500;
       color: $DarkBlue;
