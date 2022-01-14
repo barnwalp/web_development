@@ -34,6 +34,17 @@ a:hover {
   text-decoration: none;
 }
 
+.button {
+  background-color: $ModerateBlue;
+  color: $White;
+  padding: size(8) size(12);
+  border-radius: 3px;
+  height: size(36);
+  margin-left: size(16);
+  &:hover {
+    background-color: $LightGrayishBlue;
+  }
+}
 .container {
   width: 60%;
   // padding: size(16);

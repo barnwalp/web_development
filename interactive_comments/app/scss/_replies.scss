@@ -1,7 +1,9 @@
 .container {
   & .reply {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    // gap: size(12);
+    align-items: top;
     background-color: $White;
     margin-top: -(size(12));
     padding: size(12);
