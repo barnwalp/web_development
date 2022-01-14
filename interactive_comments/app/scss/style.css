@@ -136,7 +136,7 @@ a:hover {
   margin: 0 1rem;
 }
 
-.box-crud > a.remove {
+.box-crud > a.remove-button {
   color: #ed6468;
 }
 

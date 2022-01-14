@@ -3,6 +3,8 @@ window.onload = function(){
     const ratings = document.querySelectorAll('.vote');
     const upvote = document.querySelectorAll('.plus');
     const downvote = document.querySelectorAll('.minus');
+    const replies = document.querySelectorAll('.box-crud a');
+    const reply_box = document.querySelectorAll('.reply');
 
     for (const [index, rating] of ratings.entries()) {
       upvote[index].addEventListener("click", function(){
@@ -37,6 +39,13 @@ window.onload = function(){
           downvote[index].classList.add("clicked");
         }
       });
+    }
+    for (const [index, reply] of replies.entries()) {
+      reply.addEventListener('click', function() {
+        if (reply_box[index].classList.contains('hidden')) {
+          reply_box[index].classList.remove('hidden');
+        }
+      })
     }
         /*
         // remove overlay
