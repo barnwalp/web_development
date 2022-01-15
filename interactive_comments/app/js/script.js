@@ -44,6 +44,7 @@ window.onload = function(){
       reply.addEventListener('click', function() {
         if (reply_box[index].classList.contains('hidden')) {
           reply_box[index].classList.remove('hidden');
+          reply_box[index].classList.add('fade-in');
         }
       })
     }
