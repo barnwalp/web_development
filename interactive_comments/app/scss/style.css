@@ -199,11 +199,15 @@ a:hover {
 .box.shorter::before {
   content: "";
   position: absolute;
-  height: 120%;
+  height: 125%;
   top: 0;
   left: -1.25rem;
   width: 2px;
   background-color: #eaecf1;
+}
+
+.box.shorter:nth-last-child(2)::before {
+  height: 100%;
 }
 
 .container .reply {
@@ -242,10 +246,15 @@ a:hover {
 .container .reply.shorter::before {
   content: "";
   position: absolute;
-  height: 120%;
+  height: 125%;
   top: 0;
   left: -1.25rem;
   width: 2px;
   background-color: #eaecf1;
+}
+
+.container .reply.shorter:last-child::before {
+  top: -25px;
+  height: 125%;
 }
 /*# sourceMappingURL=style.css.map */
