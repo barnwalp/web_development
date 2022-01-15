@@ -193,6 +193,17 @@ a:hover {
   width: 95%;
   margin-left: auto;
   margin-right: 0;
+  position: relative;
+}
+
+.box.shorter::before {
+  content: "";
+  position: absolute;
+  height: 120%;
+  top: 0;
+  left: -1.25rem;
+  width: 2px;
+  background-color: #eaecf1;
 }
 
 .container .reply {
@@ -225,5 +236,16 @@ a:hover {
   width: 95%;
   margin-left: auto;
   margin-right: 0;
+  position: relative;
+}
+
+.container .reply.shorter::before {
+  content: "";
+  position: absolute;
+  height: 120%;
+  top: 0;
+  left: -1.25rem;
+  width: 2px;
+  background-color: #eaecf1;
 }
 /*# sourceMappingURL=style.css.map */
