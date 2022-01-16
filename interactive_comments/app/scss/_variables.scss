@@ -13,3 +13,15 @@ $font-sm: size(14);
 $font-med: size(16);
 $font-lg: size(20);
 $font-xlg: size(52);
+
+/*
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV.
+
+Small	- up to 640px	- 4" to 6"; 20" to 65"	Phones, TVs
+Medium -	641 - 1007px -	7" to 12"	Tablets
+Large	- 1008px and up	- 13" and up	PCs, Laptops, Surface Hub
+*/
