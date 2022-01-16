@@ -257,4 +257,10 @@ a:hover {
   top: -25px;
   height: 125%;
 }
+
+@media (max-width: 54.6875rem) {
+  .container {
+    width: 82%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
