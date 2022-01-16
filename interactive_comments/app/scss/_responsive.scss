@@ -1,5 +1,23 @@
+// Responsive design for Tablet
 @media (max-width: size(875)) {
   .container {
     width: 82%;
+  }
+}
+
+// Responsive design for Mobile
+@media (max-width: size(640)) {
+  .container {
+    width: 85%;
+  }
+  .box {
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-areas:
+      "pic name time"
+      "content content content"
+      "upvote crud crud";
+    &-crud > a {
+      margin: 0 size(5);
+    }
   }
 }

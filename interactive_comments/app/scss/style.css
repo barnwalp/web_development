@@ -263,4 +263,18 @@ a:hover {
     width: 82%;
   }
 }
+
+@media (max-width: 40rem) {
+  .container {
+    width: 85%;
+  }
+  .box {
+    -ms-grid-columns: 2fr 1fr 2fr;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-areas: "pic name time" "content content content" "upvote crud crud";
+  }
+  .box-crud > a {
+    margin: 0 0.3125rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
