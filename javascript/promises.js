@@ -27,7 +27,7 @@ let createPost = (post) => {
     setTimeout(()=>{
       posts.push(post);
 
-      const error = true;
+      const error = false;
       if(!error) {
         console.log('resolved');
         resolve();
@@ -39,6 +39,14 @@ let createPost = (post) => {
   });
 }
 
-createPost({'title': 'post three', 'body': 'This is third post'})
-  .then(getPost)
-  .catch((err) => console.log(err));
+// Using .then and .catch to handle promises
+// createPost({'title': 'post three', 'body': 'This is third post'})
+//   .then(getPost)
+//   .catch((err) => console.log(err));
+
+// Using async await to handle promises
+async function init() {
+  await createPost({'title': 'post three', 'body': 'This is third post'});
+  getPost();
+}
+init();
