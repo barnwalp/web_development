@@ -11,6 +11,18 @@
 </head>
 <body>
   <!-- everything inside svg is actually xml -->
+  <!-- Creating circle svg -->
+  <svg width="250" height="250">
+    <circle r="120" cx="125" cy="125" fill="#C7E755" stroke="black" stroke-width="3px"/>
+    <circle r="60" cx="125" cy="125" fill="#454749" stroke="black" stroke-width="1px"/>
+    <!-- x and y denotes the top left corner of the rectangle -->
+    <!-- rx and ry provides rounded corners -->
+    <rect rx="20" ry="20" x="100" y="100" height="50" width="50" fill="#FFFFFF"/>
+    <line x1="25" y1="125" x2="225" y2="125" stroke="black" stroke-width="5"/>
+    <!-- points are the vertices of the polygon -->
+    <polygon points="75,95 125,125 175,95 175,155 125,125 75,155" fill="pink"/>
+  </svg>
+
   <!-- alien svg icon -->
   <svg width="64px" height="64px" viewBox="0 0 64 64" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet">
     <path d="M59.5 30.6C59.5 54.1 32 62 32 62S4.5 54.1 4.5 30.6C4.5 13.1 15.5 2 32 2s27.5 11.1 27.5 28.6z" fill="#c7e755"></path>
