@@ -37,22 +37,4 @@ a:hover {
 #map {
   height: 31.25rem;
 }
-
-.background {
-  overflow: hidden;
-  position: relative;
-}
-
-.background .heading-image {
-  opacity: 0.5;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
-}
-
-.background .heading h2 {
-  color: white;
-}
 /*# sourceMappingURL=style.css.map */
