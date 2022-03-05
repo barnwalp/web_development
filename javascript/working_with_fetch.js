@@ -1,24 +1,24 @@
-console.log('fetch demo start')
+console.log('fetch demo start');
 if ('fetch' in window) {
-  console.log('browser is updated')
+  console.log('browser is updated');
 } else {
-  console.log('upgrade browser')
+  console.log('upgrade browser');
 }
-url = "http://dog.ceo/api/breeds/image/random"
+url = "http://dog.ceo/api/breeds/image/random";
 const getData = () => {
-  console.log('Before fetch')
+  console.log('Before fetch');
   fetch(url, {
     mode: 'no-cors'
   })
-  .then((respnse) => response.json())
+  .then((response) => response.json())
   .then((data) => {
-    console.log(data)
+    console.log(data);
     })
   .catch((rejected) => {
-    console.log(rejected)
+    console.log(rejected);
   })
-  console.log('After fetch')
+  console.log('After fetch');
 }
 
-getData()
-console.log('fetch demo end')
+getData();
+console.log('fetch demo end');
