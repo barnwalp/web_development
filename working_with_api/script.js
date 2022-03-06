@@ -39,3 +39,16 @@ request.onprogress = function(event) {
 request.onerror = function() {
   console.log('Request failed');
 }
+
+// Populating HTML DOM using javascript
+const app = document.getElementById('root');
+// Creating img element and setting it's src
+const logo = document.createElement('img');
+logo.src = 'logo.png';
+// Creating a container class div element
+const container = document.createElement('div');
+container.setAttribute('class', 'container');
+
+// Append the logo and container div to the app root
+app.appendChild(logo);
+app.appendChild(container);
