@@ -1,3 +1,16 @@
+// Populating HTML DOM using javascript
+const app = document.getElementById('root');
+// Creating img element and setting it's src
+const logo = document.createElement('img');
+logo.src = 'https://raw.githubusercontent.com/taniarascia/sandbox/master/ghibli/logo.png';
+// Creating a container class div element
+const container = document.createElement('div');
+container.setAttribute('class', 'container');
+
+// Append the logo and container div to the app root
+app.appendChild(logo);
+app.appendChild(container);
+
 // Create a new XMLHttpRequest object
 var request = new XMLHttpRequest();
 
@@ -11,13 +24,29 @@ request.send();
 request.onload = function() {
   if (request.status !=200) {
     console.log(`Error ${request.status}: ${request.statusText}`);
+    const errorMessage = document.createElement('marquee');
+    errorMessage.textContent = "Gah, It's not working";
   } else {
     // console.log(request.response);
     // Start working with the JSON data
     let data = JSON.parse(request.response);
     // console.log(data);
     data.forEach(movie => {
-      console.log(movie.title);
+      // Create a div with card class
+      const card = document.createElement('div');
+      card.setAttribute('class', 'card');
+
+      // Create an h1 and set the text content to the film's title
+      const h1 = document.createElement('h1');
+      h1.textContent = movie.title;
+
+      // Create a p and set the textContent
+      const p = document.createElement('p');
+      movie.description = movie.description.substring(0, 300);
+      p.textContent = movie.description;
+      container.appendChild(card)
+      card.appendChild(h1);
+      card.appendChild(p);
     })
   }
 }
@@ -39,16 +68,3 @@ request.onprogress = function(event) {
 request.onerror = function() {
   console.log('Request failed');
 }
-
-// Populating HTML DOM using javascript
-const app = document.getElementById('root');
-// Creating img element and setting it's src
-const logo = document.createElement('img');
-logo.src = 'logo.png';
-// Creating a container class div element
-const container = document.createElement('div');
-container.setAttribute('class', 'container');
-
-// Append the logo and container div to the app root
-app.appendChild(logo);
-app.appendChild(container);
