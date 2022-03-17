@@ -1,11 +1,20 @@
 const charactersList = document.getElementById('charactersList');
+const searchBar = document.getElementById('searchBar');
 let hpCharacter = [];
+
+searchBar.addEventListener('keyup', (e) => {
+  const searchString = e.target.value;
+  const filteredList = hpCharacter.filter( (character) => {
+    return character.name.toLowerCase().includes(searchString) || character.house.toLowerCase().includes(searchString)
+  });
+  console.log(filteredList);
+});
 
 const loadCharacters = async () => {
   try {
     const res = await fetch('https://hp-api.herokuapp.com/api/characters');
     hpCharacter = await res.json();
-    // console.log(hpCharacter);
+    console.log(hpCharacter);
     displayCharacters(hpCharacter);
   } catch (err) {
     console.log(err);
