@@ -3,11 +3,12 @@ const searchBar = document.getElementById('searchBar');
 let hpCharacter = [];
 
 searchBar.addEventListener('keyup', (e) => {
-  const searchString = e.target.value;
+  const searchString = e.target.value.toLowerCase();
   const filteredList = hpCharacter.filter( (character) => {
     return character.name.toLowerCase().includes(searchString) || character.house.toLowerCase().includes(searchString)
   });
-  console.log(filteredList);
+  // console.log(filteredList);
+  displayCharacters(filteredList);
 });
 
 const loadCharacters = async () => {
