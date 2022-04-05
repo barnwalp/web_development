@@ -1,21 +1,17 @@
-/* video,
-iframe {
-  max-width: 100%;
-  height: auto;
-} */
-
 .embed-container {
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
   /* overflow: hidden; */
+  /* Given the 16:9 aspect ratio, padding-bottom will be 56.25% of width i.e. 9/16 */
+  /* For 4:3 aspect ratio, padding-bottom will be 75% */
+  padding-bottom: 56.25%;
   max-width: 100%;
-  /* width: 50%; */
-  /* height: auto; */
+  margin-bottom: 15px;
 }
 
-/* .embed-container object, */
-/* .embed-container embed,*/
+/* object, embed selector is used because, while some browsers rely on object
+(e.g., Safari), others need embed (e.g., Firefox) */
+.embed-container object,
+.embed-container embed,
 .embed-container iframe {
   position: absolute;
   top: 0;
