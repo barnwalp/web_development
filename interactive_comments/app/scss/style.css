@@ -111,7 +111,7 @@ a:hover {
   display: grid;
   -ms-grid-columns: 1fr 1fr 3fr 3fr 8fr;
       grid-template-columns: 1fr 1fr 3fr 3fr 8fr;
-      grid-template-areas: "upvote pic name time crud" "upvote content content content content";
+      grid-template-areas: "upvote pic name time crud" "upvote content content content content";
 }
 
 .box-upvotes {
@@ -282,7 +282,7 @@ a:hover {
   .box {
     -ms-grid-columns: 2fr 1fr 2fr;
         grid-template-columns: 2fr 1fr 2fr;
-        grid-template-areas: "pic name time" "content content content" "upvote crud crud";
+        grid-template-areas: "pic name time" "content content content" "upvote crud crud";
   }
   .box-crud > a {
     margin: 0 0.3125rem;

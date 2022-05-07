@@ -1,0 +1,100 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: hidden;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: hidden;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 300ms ease-in-out 1 forwards;
+          animation: fade-in 300ms ease-in-out 1 forwards;
+}
+
+.fade-out {
+  -webkit-animation: fade-out 300ms ease-in-out 1 forwards;
+          animation: fade-out 300ms ease-in-out 1 forwards;
+}
+/*# sourceMappingURL=style.css.map */
