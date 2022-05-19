@@ -106,3 +106,6 @@ dist
 # Video files
 *.mp4
 *.mkv
+
+# practice folder
+practice/
