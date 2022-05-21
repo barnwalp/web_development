@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
+// functions in react is simpler way to write component which dont
+// have their own state, they take props as input and return what 
+// should be rendered
 class Square extends React.Component {
   // constructor(props) {
-    // in Javascript classes, you need to always call super when defining
-    // the constructor of subclass. All React component classes that
-    // have a constructor should start with a super(props) call.
   //   super(props);
   //   this.state = {
   //     value: null,
@@ -27,6 +27,9 @@ class Square extends React.Component {
 
 class Board extends React.Component {
   constructor(props) {
+    // in Javascript classes, you need to always call super when defining
+    // the constructor of subclass. All React component classes that
+    // have a constructor should start with a super(props) call.
     super(props);
     this.state = {
       squares: Array(9).fill(null),
@@ -42,6 +45,10 @@ class Board extends React.Component {
   }
 
   handleClick(i) {
+    // Immutability is preferred as it allows us to keep previous
+    // version and reuse them later. Immutable data can easily determine
+    // if changes have been matchMedia, which helps to determin when
+    // a component requires re-rendering
     const squares = this.state.squares.slice();
     squares[i] = 'X';
     this.setState({squares: squares});
