@@ -5,25 +5,16 @@ import './index.css';
 // functions in react is simpler way to write component which dont
 // have their own state, they take props as input and return what 
 // should be rendered
-class Square extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     value: null,
-  //   };
-  // }
-  render() {
+function Square(props) {
     return (
       <button 
         className='square' 
-        onClick={() => this.props.onClick()}
+        onClick={props.onClick}
       >
-        {this.props.value}
-        {/* {this.props.val} */}
+        {props.value}
       </button>
     );
   }
-}
 
 class Board extends React.Component {
   constructor(props) {
