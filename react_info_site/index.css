@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav img {
+  width: 70px;
+  height: auto;
+  margin-left: 20px;
+}
+nav ul li {
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 1.5rem;
+}
+.container ul li {
+  font-size: 1.5rem;
+}
+
+footer {
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+}
