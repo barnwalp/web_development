@@ -3,7 +3,7 @@ $MainColor: #BADA55;
 .App {
   text-align: center;
   &-header {
-    background-color: $MainColor;
+    background-color: teal;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
