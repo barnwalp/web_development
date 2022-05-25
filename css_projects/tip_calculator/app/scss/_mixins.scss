@@ -1,0 +1,11 @@
+// Function to convert px value to rem; default
+// font-size is considered to be 16px
+@function size($target, $defaultSize: 16) {
+  @return ($target / $defaultSize) * 1rem;
+}
+
+@mixin max-width($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

@@ -1,0 +1,80 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .wrapper {
+    padding: size(24);
+    height: 50%;
+    width: 60%;
+    background-color: $White;
+    border-radius: 1rem;
+    display: flex;
+    @media screen and (max-width: 410px) {
+      flex-direction: column;
+    }
+    &-input {
+      padding: size(8);
+      & label {
+        color: $VeryDarkCyan;
+        display: block;
+        &:not(:first-child) {
+          margin-top: size(8);
+        }
+      }
+      & .btn-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        & .btn {
+          background-color: $VeryDarkCyan;
+          color: $White;
+          flex-basis: 45%;
+          box-sizing: border-box;
+          border-radius: 0.3rem;
+          border: 0;
+          padding: size(8);
+          margin: size(4);
+          outline: None;
+          text-align: center;
+          &:hover {
+            background-color: $StrongCyan;
+          }
+          &.selected {
+            background-color: $StrongCyan;
+          }
+          @media screen and (max-width: 940px) {
+          }
+        }
+      }
+    }
+    &-result {
+      padding: size(24);
+      background-color: $VeryDarkCyan;
+      border-radius: 1rem;
+      flex: 1;
+      & .btn {
+        margin-top: size(16);
+        width: 100%;
+        background-color: $StrongCyan;
+        &:hover,
+        &:visited {
+          background-color: $DarkGrayishCyan;
+          border: 0;
+        }
+      }
+      & .result-data {
+        font-weight: 500;
+        font-size: size(24);
+        color: $White;
+        margin-bottom: size(24);
+        display: flex;
+        justify-content: space-between;
+        & span {
+          font-size: size(32);
+          color: $StrongCyan;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

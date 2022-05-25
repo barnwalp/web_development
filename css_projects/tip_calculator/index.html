@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/calculator-icon-1.png">
+  <link rel="stylesheet" href="app/scss/style.css">
+  <title>Splitter</title>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="wrapper-input">
+        <label for="bill">Bill</label>
+        <input type="text" id="bill" name="bill" required value="0">
+        <label for="tip">Select Tip %</label>
+        <div class="btn-wrapper">
+          <input class="btn" type="button" value="5%">
+          <input class="btn" type="button" value="10%">
+          <input class="btn selected" type="button" value="15%">
+          <input class="btn" type="button" value="20%">
+          <input class="btn" type="button" value="50%">
+          <input class="btn" type="text" value="Custom">
+        </div>
+        <label for="no-of-people">Number of People</label>
+        <input type="text" id="no-of-people" name="no-of-people" required value="0">
+      </div>
+      <div class="wrapper-result">
+        <div class="result-data">
+          Tip Amount/Person
+          <span>$0.0</span>
+        </div>
+        <div class="result-data">
+          Total/Person
+          <span>$0.0<span>
+        </div>
+        <label for="reset"></label>
+        <input class="btn" type="button" value="Reset">
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="app/js/script.js"></script>
+</body>
+</html>
