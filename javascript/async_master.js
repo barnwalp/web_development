@@ -22,7 +22,6 @@ function doStep1(init, callback) {
 	const result = init + 1;
 	callback(result);
 }
-
 function doStep2(init, callback) {
 	const result = init + 2;
 	callback(result);
@@ -52,7 +51,6 @@ function addName(name, time) {
 		}
 	});
 }
-
 addName('joel', 2000)
 	.then(() => addName('victoria', 2000))
 	.then(() => addName('John', 2000))
@@ -64,7 +62,7 @@ addName('joel', 2000)
 // -----------------------
 const getData = () => {
 	let url = 'bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json';
-	let data = fetch(url)
+	fetch(url)
 		.then(response => {
 			if(response.ok) {
 				return response.json();
@@ -73,7 +71,7 @@ const getData = () => {
 			}
 		})
 		.then(json_data => console.log(json_data))
-	  .catch(error => {
+		.catch(error => {
 			console.error(`could not get products: ${error}`);
 		});
 }

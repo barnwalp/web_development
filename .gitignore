@@ -109,3 +109,5 @@ dist
 
 # practice folder
 practice/
+design/
+.vscode/
