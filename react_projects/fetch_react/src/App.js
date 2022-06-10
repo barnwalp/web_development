@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
+import placeholder from './assets/placeholder.jpg';
 
 class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			loading: true,
-			user: null,
+			photoData: null
+			// user: null,
+			// url: null,
 		}
 	}
 
@@ -16,13 +19,37 @@ class App extends React.Component {
 		const response = await fetch(url);
 		const data = await response.json();
 		console.log(data);
+		this.setState({
+			// user: data.results[0].user.username,
+			// url: data.results[0].urls.raw,
+			photoData: data.results,
+			loading: false,
+		});	
 	}
 	
 	render() {
 		return (
 			<div className='container'>
+				<img src={placeholder} alt="test" />
 				<div className='item'>
-					{(this.state.loading) ? <p>loading...</p> : <p>loaded</p>}
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[0].urls.regular }/>
+					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[0].user.username}</p>
+				</div>
+				<div className='item'>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[1].urls.regular }/>
+					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[1].user.username}</p>
+				</div>
+				<div className='item'>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[2].urls.regular }/>
+					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[2].user.username}</p>
+				</div>
+				<div className='item'>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[3].urls.regular }/>
+					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[3].user.username}</p>
+				</div>
+				<div className='item'>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[4].urls.regular }/>
+					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[4].user.username}</p>
 				</div>
 			</div>
 		)
