@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import placeholder from './assets/placeholder.jpg';
+import { FaStar } from "react-icons/fa";
 
 class App extends React.Component {
 	constructor(props) {
@@ -8,8 +9,6 @@ class App extends React.Component {
 		this.state = {
 			loading: true,
 			photoData: null
-			// user: null,
-			// url: null,
 		}
 	}
 
@@ -20,37 +19,81 @@ class App extends React.Component {
 		const data = await response.json();
 		console.log(data);
 		this.setState({
-			// user: data.results[0].user.username,
-			// url: data.results[0].urls.raw,
 			photoData: data.results,
 			loading: false,
 		});	
 	}
 	
 	render() {
+		let items = [];
+		for(let i=0; i<9; i++) {
+			items.push(
+				<div className='item'>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[i].urls.small }/>
+					<p> 5.0 < FaStar/> (USA)</p>
+					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[i].user.username}</p>
+					<p>Curabitur feugiat semper tempus</p>
+				</div>
+			)	
+		}
 		return (
-			<div className='container'>
-				// <img src={placeholder} alt="test" />
+			<div className='carousal'>
+				{items}
+			  {/*
 				<div className='item'>
 					<img src={(this.state.loading) ? placeholder : this.state.photoData[0].urls.small }/>
+					<p> 5.0 < FaStar/> (USA)</p>
 					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[0].user.username}</p>
+					<p>Curabitur feugiat semper tempus</p>
 				</div>
 				<div className='item'>
 					<img src={(this.state.loading) ? placeholder : this.state.photoData[1].urls.small }/>
+					<p> 5.0 < FaStar/> (USA)</p>
 					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[1].user.username}</p>
+					<p>Curabitur feugiat semper tempus</p>
 				</div>
 				<div className='item'>
 					<img src={(this.state.loading) ? placeholder : this.state.photoData[2].urls.small }/>
+					<p> 5.0 < FaStar/> (USA)</p>
 					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[2].user.username}</p>
+					<p>Curabitur feugiat semper tempus</p>
 				</div>
 				<div className='item'>
 					<img src={(this.state.loading) ? placeholder : this.state.photoData[3].urls.small }/>
+					<p> 5.0 < FaStar/> (USA)</p>
 					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[3].user.username}</p>
+					<p>Curabitur feugiat semper tempus</p>
 				</div>
 				<div className='item'>
 					<img src={(this.state.loading) ? placeholder : this.state.photoData[4].urls.small }/>
+					<p> 5.0 < FaStar/> (USA)</p>
 					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[4].user.username}</p>
+					<p>Curabitur feugiat semper tempus</p>
 				</div>
+				<div className='item'>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[5].urls.small }/>
+					<p> 5.0 < FaStar/> (USA)</p>
+					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[5].user.username}</p>
+					<p>Curabitur feugiat semper tempus</p>
+				</div>
+				<div className='item'>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[6].urls.small }/>
+					<p> 5.0 < FaStar/> (USA)</p>
+					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[6].user.username}</p>
+					<p>Curabitur feugiat semper tempus</p>
+				</div>
+				<div className='item'>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[7].urls.small }/>
+					<p> 5.0 < FaStar/> (USA)</p>
+					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[7].user.username}</p>
+					<p>Curabitur feugiat semper tempus</p>
+				</div>
+				<div className='item'>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[8].urls.small }/>
+					<p> 5.0 < FaStar/> (USA)</p>
+					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[8].user.username}</p>
+					<p>Curabitur feugiat semper tempus</p>
+				</div> */}
 			</div>
 		)
 	}
