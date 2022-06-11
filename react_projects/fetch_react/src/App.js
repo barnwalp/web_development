@@ -30,25 +30,25 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className='container'>
-				<img src={placeholder} alt="test" />
+				// <img src={placeholder} alt="test" />
 				<div className='item'>
-					<img src={(this.state.loading) ? placeholder : this.state.photoData[0].urls.regular }/>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[0].urls.small }/>
 					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[0].user.username}</p>
 				</div>
 				<div className='item'>
-					<img src={(this.state.loading) ? placeholder : this.state.photoData[1].urls.regular }/>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[1].urls.small }/>
 					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[1].user.username}</p>
 				</div>
 				<div className='item'>
-					<img src={(this.state.loading) ? placeholder : this.state.photoData[2].urls.regular }/>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[2].urls.small }/>
 					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[2].user.username}</p>
 				</div>
 				<div className='item'>
-					<img src={(this.state.loading) ? placeholder : this.state.photoData[3].urls.regular }/>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[3].urls.small }/>
 					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[3].user.username}</p>
 				</div>
 				<div className='item'>
-					<img src={(this.state.loading) ? placeholder : this.state.photoData[4].urls.regular }/>
+					<img src={(this.state.loading) ? placeholder : this.state.photoData[4].urls.small }/>
 					<p>{(this.state.loading) ? 'loading...' : this.state.photoData[4].user.username}</p>
 				</div>
 			</div>
