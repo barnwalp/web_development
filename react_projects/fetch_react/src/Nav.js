@@ -1,8 +1,7 @@
 import React from "react";
 import hero from './assets/hero.png';
-// import { FaHotel } from 'react-icons/fa';
 import { TbHotelService } from "react-icons/tb";
-import './nav.css';
+import './nav.scss';
 
 function Nav() {
 	return (
