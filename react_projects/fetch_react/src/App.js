@@ -23,6 +23,36 @@ class App extends React.Component {
 			loading: false,
 		});	
 	}
+	/* Method 1
+	 * let openSlots = 9;		// 0 means sold out 
+	 *
+	 * return (
+	 *	 // creating a sold out banner over an image
+	 *	 {openSlot === 0 && <div className="card--badge">SOLD OUT</div>}
+	 * )
+	 *
+	 * Method 2
+	 * let openSlot = 7;
+	 * let location = online;
+	 * let badgeText;
+	 *
+	 * if (openSlot === 0) {
+	 *	 badgeText = 'SOLD OUT';
+	 * } else if ( location === 'online') {
+	 *	 badgeText = 'Online';
+	 * } 
+	 *
+	 * return (
+	 *   // creating either sold out or online banner over an image
+	 *	 {badgeText && <div className="card--badge">{badgeText}<div>}
+	 * )
+	 *
+	 *
+	 *
+	 *
+	 *
+	 */
+
 	
 	render() {
 		let items = [];
