@@ -21,12 +21,27 @@ function App() {
 			setIsImportant("Yes");
 		}
 	}
+	
+	// if current value of state is required to determine new value
+	// then, it is always advisable to pass a callback function to 
+	// the setter function, instead of using the state directly.
+	// This callback function will receive the current value of state,
+	// which can be used to change the state
+	function handleClickBetter() {
+		setIsImportant(function(preValue){
+			if(preValue === "Yes"){
+				return "No";
+			} else {
+				return "Yes";
+			}
+		});
+	}
 
   return (
     <div className="App">
 			<h1>Is React state important?</h1>
 			<p>{isImportant}</p>
-			<button onClick={handleClick} className="btn">Toggle</button>
+			<button onClick={handleClickBetter} className="btn">Toggle</button>
     </div>
   )
 }
