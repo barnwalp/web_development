@@ -1,6 +1,7 @@
 import React from "react";
+import './BasicState.css';
 
-function App() {
+function BasicState() {
 	/*
 	// declaring a state
 	// useState returns an array
@@ -46,4 +47,4 @@ function App() {
   )
 }
 
-export default App;
+export default BasicState;
