@@ -10,4 +10,12 @@
 	height: 100%;
 	margin: auto;
 	border-radius: 50%;
+	display: block;
 }
+
+.card-container .star {
+	max-width: 10%;
+	height: 100%;
+	display: block;
+}
+
