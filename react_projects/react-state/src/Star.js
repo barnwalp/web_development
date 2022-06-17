@@ -9,6 +9,7 @@ function Star(props){
 	return (
 		<img 
 			style={cssStyle}
+			onClick={props.handleClick}
 			src={props.location}
 		/>	
 	)

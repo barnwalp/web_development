@@ -30,7 +30,7 @@ function ObjectState() {
 	return (
 		<div className="card-container">
 			<img className="card-image" src={placeholder}/>
-			<Star location={star}/>
+			<Star location={star} handleClick={toggleFavorite}/>
 			<p>{thingsObj.firstName} {thingsObj.lastName}</p>
 			<p>{thingsObj.contact}</p>
 			<p>{thingsObj.email}</p>
