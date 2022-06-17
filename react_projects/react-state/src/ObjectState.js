@@ -1,8 +1,10 @@
 import React from "react";
 import placeholder from './placeholder.jpg';
 import './ObjectState.css';
-import star_full from './star_full.png'
-import star_empty from './star_empty.png'
+import star_full from './star_full.png';
+import star_empty from './star_empty.png';
+import Star from './Star.js';
+
 
 function ObjectState() {
 	const [thingsObj, setThingsObj] = React.useState({
@@ -28,7 +30,7 @@ function ObjectState() {
 	return (
 		<div className="card-container">
 			<img className="card-image" src={placeholder}/>
-			<img onClick={toggleFavorite} className="star" src={star}/>
+			<Star location={star}/>
 			<p>{thingsObj.firstName} {thingsObj.lastName}</p>
 			<p>{thingsObj.contact}</p>
 			<p>{thingsObj.email}</p>
