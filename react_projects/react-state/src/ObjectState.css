@@ -1,0 +1,13 @@
+.card-container {
+	margin: 16px auto;
+	max-width: 20%;
+	border: 1px solid black;
+	padding: 18px;
+}
+
+.card-container .card-image {
+	max-width: 90%;
+	height: 100%;
+	margin: auto;
+	border-radius: 50%;
+}
