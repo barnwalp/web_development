@@ -32,9 +32,27 @@ function Box() {
 
 	const squares = boxes.map(item => {
 		return (
-			<div className="box" id={item.id}>{item.id}</div>
+			<div 
+				className="box" 
+				key={item.id}
+				style={item.on ? {backgroundColor:"black"} : {backgroundColor:"white"}}
+				onClick={() => toggleBg(item.id)}				
+			>
+			</div>
 		)
 	})
+
+	function toggleBg(id) {
+		setBoxes(currBoxes => {
+			const newBoxes = [...currBoxes];
+			newBoxes.forEach((square) => {
+				if (square.id === id) {
+					square.on = !square.on;
+				}
+				})
+			return newBoxes;
+		});
+	}
 
 	return (
 		<div className="box-container">
