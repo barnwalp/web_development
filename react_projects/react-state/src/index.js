@@ -5,6 +5,7 @@ import BasicState from './BasicState';
 import ArrayState from './ArrayState';
 import ObjectState from './ObjectState';
 import Box from './Box.js';
+import Form from './Form.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,5 +14,6 @@ root.render(
 		<ArrayState />
 		<Box />
 		<ObjectState />
+		<Form />
 	</div>
 );
