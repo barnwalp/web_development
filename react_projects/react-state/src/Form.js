@@ -9,10 +9,9 @@ function Form() {
 		comment: "",
 		isFriendly: true,
 		employement: "",
+		favLanguage: "",
 	})
 	
-	console.log(formData);
-
 	function handleInput(event) {
 		const {name, value, type, checked} = event.target;
 		setFormData(currData => {
@@ -23,8 +22,15 @@ function Form() {
 		})
 	}
 
+	function handleSubmit(event) {
+		// prevent the form to refresh the page after submit the 
+		// button and to retain the data in the inputs
+		event.preventDefault();
+		console.log(formData);
+	}
+
 	return (
-		<div className="form">
+		<form onSubmit={handleSubmit}>
 			<input 
 				className="input" 
 				onChange={handleInput} 
@@ -101,7 +107,28 @@ function Form() {
 				/>
 				<label htmlFor="Unemployed">Unemployed</label>
 			</fieldset>
-		</div>
+			<br/>
+			<label htmlFor="favLanguage">What's your favorite language?</label>
+			<br/>
+			<select 
+				id="favLanguage" 
+				name="favLanguage"
+				value={formData.favLanguage}
+				onChange={handleInput}
+			>
+				<option value="javascript">javascript</option>
+				<option value="python">python</option>
+				<option value="java">java</option>
+				<option value="C">C</option>
+				<option value="C++">C++</option>
+				<option value="Ruby">Ruby</option>
+				<option value="Dart">Dart</option>
+				<option value="Kotlin">Kotlin</option>
+				<option value="Swift">Swift</option>
+			</select>
+			<br />
+			<button>Submit</button>
+		</form>
 	)
 }
 

@@ -5,7 +5,8 @@ import BasicState from './BasicState';
 import ArrayState from './ArrayState';
 import ObjectState from './ObjectState';
 import Box from './Box.js';
-import Form from './Form.js'
+import Form from './Form.js';
+import VarLength from './VarLength.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,5 +16,6 @@ root.render(
 		<Box />
 		<ObjectState />
 		<Form />
+		<VarLength />
 	</div>
 );

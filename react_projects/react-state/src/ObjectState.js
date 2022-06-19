@@ -1,8 +1,8 @@
 import React from "react";
-import placeholder from './placeholder.jpg';
+import placeholder from './assets/placeholder.jpg';
 import './ObjectState.css';
-import star_full from './star_full.png';
-import star_empty from './star_empty.png';
+import star_full from './assets/star_full.png';
+import star_empty from './assets/star_empty.png';
 import Star from './Star.js';
 
 

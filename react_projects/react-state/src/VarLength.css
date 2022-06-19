@@ -1,0 +1,19 @@
+.var-container {
+	max-width: 80%;
+	border: 1px solid black;
+	padding: 18px;
+	margin: 16px auto;
+}
+
+.btn {
+	width: 100%;	
+	margin-left: auto;
+	margin-right: auto;
+	padding: 8px 16px;
+}
+
+p {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
