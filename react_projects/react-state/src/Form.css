@@ -12,3 +12,8 @@
 	margin-bottom: 18px;
 	border-radius: 10px;
 }
+
+textarea {
+	display: block;
+	margin-bottom: 16px;
+}
