@@ -8,6 +8,7 @@ function Form() {
 		email: "",
 		comment: "",
 		isFriendly: true,
+		employement: "",
 	})
 	
 	console.log(formData);
@@ -17,7 +18,7 @@ function Form() {
 		setFormData(currData => {
 			return({
 				...currData,
-				[name]: (type === "input") ? value : checked
+				[name]: (type === "checkbox") ? checked : value
 			})
 		})
 	}
@@ -67,6 +68,39 @@ function Form() {
 				onChange={handleInput}
 			/>
 			<label htmlFor="isFriendly">Are you friendly?</label>
+			<fieldset>
+				<legend>Current Employement Status</legend>
+
+				<input 
+					name="employement"
+					type="radio"
+					id="full-time"
+					value="full-time"
+					onChange={handleInput}
+					checked={formData.employement === "full-time"}
+				/>
+				<label htmlFor="full-time">Full-Time</label>
+				<br/>
+				<input 
+					name="employement"
+					type="radio"
+					id="part-time"
+					value="part-time"
+					onChange={handleInput}
+					checked={formData.employement === "part-time"}
+				/>
+				<label htmlFor="part-time">Part-Time</label>
+				<br/>
+				<input 
+					name="employement"
+					type="radio"
+					id="Unemployed"
+					value="Unemployed"
+					onChange={handleInput}
+					checked={formData.employement === "Unemployed"}
+				/>
+				<label htmlFor="Unemployed">Unemployed</label>
+			</fieldset>
 		</div>
 	)
 }
