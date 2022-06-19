@@ -3,23 +3,38 @@ import './VarLength.css';
 
 
 function VarLength() {
-	const [length, setLength] = React.useState(window.innerWidth);
+	const [length, setLength] = React.useState({
+		width: window.innerWidth,
+		show: true,
+	});
 
-	// function handleClick() {
-	// 	console.log(window.innerWidth);
-	// 	setLength(window.innerWidth);
-	// }
+	function toggle() {
+		setLength(currLength => ({
+			...currLength,
+			show: !currLength.show,
+		}))
+	}
 
 	React.useEffect(() => {
-		window.addEventListener("resize", function(){
-			setLength(window.innerWidth);
-		})
+		function getWidth() {
+			setLength((currLength) => {
+				return ({
+					...currLength,
+					width: window.innerWidth
+				})
+			});
+		}
+		window.addEventListener("resize", getWidth)
+		// avoiding leak memory
+		return function() {
+			window.removeEventListener("resize", getWidth);
+		}
 	}, []);
 
 	return (
 		<div className="var-container">
-			<button className="btn">Window inner item</button>
-			<p>{length}</p>
+			<button onClick={toggle} className="toggle">Toggle width output</button>
+			{length.show && <p>{length.width}</p>}
 		</div>
 	)
 }
