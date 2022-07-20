@@ -25,7 +25,7 @@ function VarLength() {
 			});
 		}
 		window.addEventListener("resize", getWidth)
-		// avoiding leak memory
+		// avoiding memory leak
 		return function() {
 			window.removeEventListener("resize", getWidth);
 		}
