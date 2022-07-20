@@ -24,3 +24,22 @@ test('truthy vs falsy', () => {
 	expect(n).toBeFalsy();
 	expect(n).not.toBeTruthy();
 })
+
+// it will run for all tests being done here, if you want to use
+// it only for the array section, use it inside the describe block
+beforeEach(() => {
+	console.log('before each test');
+	animals = ['elephant', 'lion', 'jaguar', 'cheetah', 'panther'];
+});
+
+describe("animal array", () => {
+	it('Pushing animal at the end', () => {
+		animals.push('tiger');
+		expect(animals[animals.length - 1]).toBe('tiger');
+	});
+
+	it('Adding animal at the beginning', () => {
+		animals.unshift('aligator');
+		expect(animals[0]).toBe('aligator');
+	});
+})
