@@ -1,4 +1,10 @@
-const functions = require('./functions');
+/*
+	* Units that have no dependencies are called isolated(solitory) units and units that have dependencies are called sociable units.
+	* the output of sociable unit depends on other units of code. it other units fail, the tested unit fails as well.
+	* Sociable units can be isolated using mock implementations of their dependencies. Mocks control how dependencies behave during tests, making sociable units predictable to test.
+*/
+
+const functions = require('../functions');
 
 test('Testing Addition functions', () => {
 	expect(functions.add(2, 2)).toBe(4);
