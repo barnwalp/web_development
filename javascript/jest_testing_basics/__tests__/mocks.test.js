@@ -1,13 +1,5 @@
-const forEach = (items, callback) => {
-	for (let i=0; i<items.length; i++) {
-		callback(items[i]);
-	}
-}
+/*
+	* Using mocks, one can control the return of a function dependency, not matter what arguments it is called with.
+	* Mock functions help manipulate the control flow of the tested program and reach even those difficult to reproduce edge cases when writing test.
+*/
 
-it ('mock callback', () => {
-	const mockCallback = jest.fn(x => 42 + x);
-	forEach([0, 1], mockCallback);
-
-	// Each callback has a mock property
-	expect(mockCallback.mock.calls.length).toBe(2)
-})
