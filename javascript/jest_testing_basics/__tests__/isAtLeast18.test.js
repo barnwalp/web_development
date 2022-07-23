@@ -11,26 +11,24 @@ const isInteger = require('../isInteger');
 // the mock factory returns the function () => false
 // jest.mock('../isInteger', () => () => false);
 
-// describe('isAtLeast18', () => {
-// 	test('fails if value is not recognised as integer', () => {
-// 		// should pass but fails because of the isInteger mock
-// 		expect(isAtLeast18(19)).toBe(false);
-// 		// should fail either way
-// 		expect(isAtLeast18("ab")).toBe(false);
-// 	})
-// })
-
 // Another way to implement mock function where implemention can be changed
 jest.mock('../isInteger', () => jest.fn());
+
+// Clear the mock data before each test
+beforeEach(() => {
+	isInteger.mockClear();
+});
 
 describe("isAtLeast18", () => {
 	test('isInteger is mocked to return false', () => {
 		isInteger.mockImplementation(() => false);
+
 		expect(isAtLeast18(123)).toBe(false);
 		expect(isAtLeast18("abc")).toBe(false);
 	});
 	test('isInteger is mocked to return true', () => {
 		isInteger.mockImplementation(() => true);
+
 		expect(isAtLeast18(123)).toBe(true);
 		expect(isAtLeast18("abc")).toBe(false);
 	});
