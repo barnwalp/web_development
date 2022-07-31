@@ -32,4 +32,4 @@ describe("isAtLeast18", () => {
 		expect(isAtLeast18(123)).toBe(true);
 		expect(isAtLeast18("abc")).toBe(false);
 	});
-})
+
