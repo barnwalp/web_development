@@ -15,6 +15,20 @@ function VarLength() {
 		}))
 	}
 
+	// useEffect is a react hook that manages the side-effect in react.
+	// component rendering and side-effect logic are independent. side
+	// effects are fetch request, timer function, manipulating DOM directly.
+	//
+	// useEffect runs side-effects independently of rendering. Ex-
+	// useEffect(callback, [depedencies]), callback contains the side-
+	// effect logic whereas depedencies is an optional array, callback
+	// is executed only if depedencies have changed between rendering
+	//
+	// when depedencies is not provided, the side-effect runs after
+	// every rendering. If depedencies is an empty array, the side effect 
+	// will run once after the initial rendering. If it's an state/props,
+	// the side-effect runs only when any depedency value changes
+
 	React.useEffect(() => {
 		function getWidth() {
 			setLength((currLength) => {

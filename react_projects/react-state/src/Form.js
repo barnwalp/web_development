@@ -13,6 +13,7 @@ function Form() {
 	})
 	
 	function handleInput(event) {
+		console.log(event.target);
 		const {name, value, type, checked} = event.target;
 		setFormData(currData => {
 			return({

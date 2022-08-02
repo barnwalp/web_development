@@ -2,17 +2,12 @@ import React from "react";
 import './BasicState.css';
 
 function BasicState() {
-	/*
-	// declaring a state
-	// useState returns an array
-	const [result, func] = React.useState('Yes');
-	console.log(result);
+	// isImportant is the variable while setIsImportant is the func
+	// to change the variable.
 
-	//to change the state value, func is used
-	func('No');
-	*/
-
-	// Better way to manage state
+	// one this to note is that react will render the components and 
+	// it's child components every time state is changed or new props
+	// from parent component is passed
 	const [isImportant, setIsImportant] = React.useState("Yes");
 
 	function handleClick() {
